@@ -33,13 +33,14 @@ I ran the following commands to get pip and virtual environments installed on WS
 	sudo apt-get update
 	sudo apt-get install python3-pip
 	sudo apt-get install python3-venv
+	sudo apt install qtwayland5
 
 
 I created a virtual environment, activated it. Once activated, I installed all the dependencies
-this will take a few minutes and only needs to be done the first time:
+this will take a few minutes and only needs to be done the first time: *nlpProject can be replaced with anything*
 	cd ~
-	python3 -m venv <VirtualEnvName>
-	source <virtualEnvName>/bin/activate 
+	python3 -m venv nlpProject
+	source ~/nlpProject/bin/activate 
 	python3 -m pip install -r requirementsNLP.txt
 
 I then opened up 6 different terminalks
@@ -63,17 +64,17 @@ I then opened up 6 different terminalks
 4 In the fourth terminal, I activated the virtual environment in this terminal 
 and ran the first consumer (consumes on topic1 and produces on topic2):
 
-	source ~/<virtualEnvName>/bin/activate 
+	source ~/nlpProject/bin/activate 
 	python3 ~/cometNews/entityCounter.py
 
 5 In the fifth terminal I do something similar, but I run the second consumer (consumes on topic1)
 
-	source ~/<virtualEnvName>/bin/activate
+	source ~/nlpProject/bin/activate
 	python3 ~/cometNews/cometNews.py
 
 6 In the sixth terminal I do something similar, but I run the first producer (produces on topic1)
 
-	source ~/<virtualEnvName>/bin/activate 
+	source ~/nlpProject/bin/activate 
 	python3 ~/cometNews/newsGrabber.py
 
 then we let this program run for 60 minutes, all the output should be shown in the cometNews.py GUI 
