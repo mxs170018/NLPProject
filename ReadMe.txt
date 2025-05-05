@@ -45,18 +45,18 @@ this will take a few minutes and only needs to be done the first time:
 I then opened up 6 different terminalks
 1 In the first terminal I cd into the kafka folder and wrote the following commands:
 
-	cd ~/cd kafka_2.12-3.4.1/
+	cd ~/kafka_2.12-3.4.1/
 	bin/zookeeper-server-start.sh config/zookeeper.properties
 
 2 In the second terminal I also CD Kafka folder and wrote the following command:
 
-	cd ~/cd kafka_2.12-3.4.1/
+	cd ~/kafka_2.12-3.4.1/
 	bin/kafka-server-start.sh config/server.properties
 
 3 In the third terminal I CD into the kafka folder and created two topics using the following commands
 (this only has to be done the first time):
 
-	cd ~/cd kafka_2.12-3.4.1/
+	cd ~/kafka_2.12-3.4.1/
 	bin/kafka-topics.sh --create --topic topic1 --bootstrap-server localhost:9092
 	bin/kafka-topics.sh --create --topic topic2 --bootstrap-server localhost:9092
 
@@ -64,7 +64,7 @@ I then opened up 6 different terminalks
 and ran the first consumer (consumes on topic1 and produces on topic2):
 
 	source ~/<virtualEnvName>/bin/activate 
-	python3 cometNews/entityCounter.py
+	python3 ~/cometNews/entityCounter.py
 
 5 In the fifth terminal I do something similar, but I run the second consumer (consumes on topic1)
 
