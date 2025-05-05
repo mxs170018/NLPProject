@@ -21,9 +21,7 @@ import wikipediaapi
 import os
 os.environ["QT_QPA_PLATFORM"] = "wayland"
 client = OpenAI(
-    api_key="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"
-)
-NEWS_API_KEY='1727d8504482453fa91b96e5c3835093'
+    api_key="SECRET"
 wiki = wikipediaapi.Wikipedia(
     user_agent='MyProjectName (merlin@example.com)',
     language="en"
