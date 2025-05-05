@@ -19,7 +19,7 @@ from PyQt5.QtGui import QPalette, QColor, QFont, QPixmap
 from openai import OpenAI
 import wikipediaapi
 import os
-os.environ["QT_QPA_PLATFORM"] = "wayland"
+#os.environ["QT_QPA_PLATFORM"] = "wayland"
 client = OpenAI(
     api_key="secret"
 )
